@@ -17,14 +17,14 @@ body {
 body::before {
     content: '';
     position: absolute;
-    top: 0; /* Прижимает изображение к верху */
-    left: 0; /* Прижимает изображение к левому краю */
-    width: 100%; /* Занимает всю ширину */
-    height: 100%; /* Занимает всю высоту */
-    background-image: url('image/stars.svg'); /* Путь к вашему изображению */
-    background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь экран */
-    z-index: -1; /* Убедитесь, что фон находится за другими элементами */
-    pointer-events: none; /* Предотвращает взаимодействие с фоном */
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    background-image: url('image/stars.svg'); 
+    background-size: cover; 
+    z-index: -1; 
+    pointer-events: none;
 }
 
 header{
@@ -124,9 +124,9 @@ header{
     padding: 8px 24px;
     background: linear-gradient( rgba(82, 82, 82, 1), rgba(41, 41, 41, 1));
     color: #fff;
-    cursor: pointer; /* Добавлено для улучшения UX */
-    pointer-events: auto; /* Убедитесь, что кнопка доступна для кликов */
-    z-index: 1; /* Убедитесь, что кнопка видна и доступна */
+    cursor: pointer;
+    pointer-events: auto; 
+    z-index: 1; 
     border: none;
 }
 
