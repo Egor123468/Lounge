@@ -1,0 +1,242 @@
+:root {
+    --header-height: 66px;
+    --header-height-with-spacings: calc( var(--header-height) + 42px);
+}
+p{
+    margin: 0;
+}
+body {
+    background-color: black; 
+    margin: 0; 
+    padding: 0; 
+    color: white;
+    font-family: Fira , sans-serif;
+    position: relative; 
+    padding-top: var(--header-height-with-spacings);
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Прижимает изображение к верху */
+    left: 0; /* Прижимает изображение к левому краю */
+    width: 100%; /* Занимает всю ширину */
+    height: 100%; /* Занимает всю высоту */
+    background-image: url('image/stars.svg'); /* Путь к вашему изображению */
+    background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь экран */
+    z-index: -1; /* Убедитесь, что фон находится за другими элементами */
+    pointer-events: none; /* Предотвращает взаимодействие с фоном */
+}
+
+header{
+    height: 87px;
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.header-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border: 1px solid rgba(224, 224, 224, 0.1);
+    background-color: black;
+}
+
+.header-logo{
+    height: 32px;
+}
+.logo-nav{
+    display: flex;
+    gap: 4px;
+}
+.logo-nav-item{
+    padding: 6px 24px;   
+    color: white; 
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 12px;
+}
+.logo-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 99px;
+    opacity: 1;
+    font-weight: 600;
+}
+
+.btn-border{
+    height: 43px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    border-radius: 99px;
+}
+
+.header-btn{
+    padding: 8px 24px;
+    width: auto;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+
+.intro{
+    display: flex;
+    height: auto;
+    width: auto;
+}
+.intro-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 100px;
+}
+.intro-h{
+    font-size: 120px;
+    line-height: 120px;
+    padding-left: 10px;
+}
+.intro-p{
+
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    opacity: 0.5;
+}
+.intro-contacts{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    
+}
+.intro-button{
+    border-radius: 99px;
+    padding: 8px 24px;
+    background: linear-gradient( rgba(82, 82, 82, 1), rgba(41, 41, 41, 1));
+    color: #fff;
+    cursor: pointer; /* Добавлено для улучшения UX */
+    pointer-events: auto; /* Убедитесь, что кнопка доступна для кликов */
+    z-index: 1; /* Убедитесь, что кнопка видна и доступна */
+    border: none;
+}
+
+.hookah-img{
+    height:632px;
+    
+}
+
+
+.text-center{
+    padding: 64px 0 64px 0;
+}
+
+.content-text{
+    display: flex;
+    justify-content: center;
+}
+.content-text p{
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.content-img{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 128px;
+}
+.img-container {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: -1;
+    
+}
+
+.img-container:hover::before {
+    border-radius: 12px;
+    background: linear-gradient(rgba(82, 82, 82, 1), rgba(0, 0, 0, 1)) ;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25); 
+}
+.img-container:hover img {
+    border-radius: 12px;
+    
+}
+
+.end{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 128px;
+}
+.end .intro-h{
+    text-align: center;
+}
+.end .intro-p{
+    width: 30%;
+    text-align: center;
+}
+
+
+.footer{
+    width: 100%;
+    padding: 80px 143px;
+    background-color: black;
+}
+
+.footer-logo{
+    width: 25%;
+}
+.footer-logo-text{
+    width:100%;
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav{
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-internet{
+    display: flex;
+    gap: 64px;
+}
+
+.line{
+    margin-bottom: 20px;
+}
+.footer-info-option{
+    display: flex;
+    gap: 30px;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+}
